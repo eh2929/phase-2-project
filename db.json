@@ -1,0 +1,84 @@
+{
+  "games": [
+    {
+      "id": 1,
+      "title": "Stardew Valley",
+      "genre": "Simulation",
+      "description": "Build a farm, make friends, and enjoy a relaxing rural life.",
+      "mood": "Relaxing",
+      "image_url": "https://upload.wikimedia.org/wikipedia/en/thumb/6/63/Stardew_Valley_cover_art.jpg/220px-Stardew_Valley_cover_art.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Minecraft",
+      "genre": "Sandbox",
+      "description": "Build, explore, and create in a blocky, open-world environment.",
+      "mood": "Creative",
+      "image_url": "https://upload.wikimedia.org/wikipedia/en/thumb/5/51/Minecraft_cover.png/220px-Minecraft_cover.png"
+    },
+    {
+      "id": 3,
+      "title": "Among Us",
+      "genre": "Social Deduction",
+      "description": "Work together to complete tasks, but watch out for impostors!",
+      "mood": "Social",
+      "image_url": "https://upload.wikimedia.org/wikipedia/en/thumb/6/62/Among_Us_logo.svg/220px-Among_Us_logo.svg.png"
+    },
+    {
+      "id": 4,
+      "title": "Animal Crossing: New Horizons",
+      "genre": "Life Simulation",
+      "description": "Create your own island paradise and enjoy a relaxing, social life.",
+      "mood": "Relaxing",
+      "image_url": "https://upload.wikimedia.org/wikipedia/en/thumb/6/67/Animal_Crossing_New_Horizons.jpg/220px-Animal_Crossing_New_Horizons.jpg"
+    },
+    {
+      "id": 5,
+      "title": "Terraria",
+      "genre": "Action-Adventure",
+      "description": "Explore, build, and battle in a 2D sandbox world.",
+      "mood": "Creative",
+      "image_url": "https://upload.wikimedia.org/wikipedia/en/thumb/6/6a/Terraria_cover_art.png/220px-Terraria_cover_art.png"
+    },
+    {
+      "id": 6,
+      "title": "Fortnite",
+      "genre": "Battle Royale",
+      "description": "Compete in a fast-paced battle royale with a social multiplayer aspect.",
+      "mood": "Social",
+      "image_url": "https://upload.wikimedia.org/wikipedia/en/thumb/0/03/Fortnite_Box_Art.jpg/220px-Fortnite_Box_Art.jpg"
+    },
+    {
+      "id": 7,
+      "title": "Journey",
+      "genre": "Adventure",
+      "description": "Embark on a beautiful, artistic journey with online cooperative play.",
+      "mood": "Relaxing",
+      "image_url": "https://upload.wikimedia.org/wikipedia/en/thumb/2/2a/Journey_Gameplay.jpg/220px-Journey_Gameplay.jpg"
+    },
+    {
+      "id": 8,
+      "title": "The Sims 4",
+      "genre": "Life Simulation",
+      "description": "Create and control people in a virtual world, focusing on daily life.",
+      "mood": "Creative",
+      "image_url": "https://upload.wikimedia.org/wikipedia/en/thumb/8/8c/The_Sims_4_boxart.png/220px-The_Sims_4_boxart.png"
+    },
+    {
+      "id": 9,
+      "title": "Fall Guys: Ultimate Knockout",
+      "genre": "Battle Royale",
+      "description": "Compete in whimsical challenges in a lighthearted social environment.",
+      "mood": "Social",
+      "image_url": "https://upload.wikimedia.org/wikipedia/en/thumb/0/0e/Fall_Guys_cover_art.jpg/220px-Fall_Guys_cover_art.jpg"
+    },
+    {
+      "id": 10,
+      "title": "Gris",
+      "genre": "Platformer",
+      "description": "Experience a serene journey through a world of sorrow and hope.",
+      "mood": "Relaxing",
+      "image_url": "https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/Gris_cover_art.jpg/220px-Gris_cover_art.jpg"
+    }
+  ]
+}
