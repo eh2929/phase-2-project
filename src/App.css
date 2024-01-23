@@ -1,20 +1,59 @@
+body {
+  background-color: grey;
+}
+
 .game-grid {
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  justify-content: center;
+  overflow-x: auto;
   padding: 20px;
+  height: 300px; 
 }
 
 .game-grid div {
-  flex: 1 0 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
   margin: 10px;
+  opacity: 0.5;
+}
+
+.game-grid div.selected {
+  transform: scale(1.2);
+  opacity: 1;
+}
+
+.selected-game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px; 
+  margin: 20px auto;
+}
+
+.game-details {
   text-align: center;
 }
 
-.game-grid img {
+.game-title {
+  text-align: center;
+}
+
+.selected-game {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.selected-game img {
+  margin: 0 50px;
+}
+
+.game-grid img,
+.selected-game img {
   width: 100%;
-  height: 200px;
   object-fit: contain;
 }
 
