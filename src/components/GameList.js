@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
+import Reviews from "./Reviews";
 
 function GameList({ games }) {
   const [selectedGame, setSelectedGame] = useState(games[0]);
@@ -43,28 +44,31 @@ function GameList({ games }) {
         ))}
       </div>
       {selectedGame && (
-        <div>
+        <div className="game-and-reviews">
           <div className="selected-game">
             <button onClick={selectPreviousGame}>Previous</button>
             <img src={selectedGame.image_url} alt={selectedGame.title} />
             <button onClick={selectNextGame}>Next</button>
           </div>
-          <div className="game-title">
-            <h2>{selectedGame.title}</h2>
+          <div className="game-info-and-reviews">
+            <div className="game-details">
+              <div className="game-title">
+                <h2>{selectedGame.title}</h2>
+              </div>
+              <p>
+                <strong>Genre:</strong> {selectedGame.genre}
+              </p>
+              <p>
+                <strong>Description:</strong> {selectedGame.description}
+              </p>
+              <p>
+                <strong>Mood:</strong> {selectedGame.mood}
+              </p>
+            </div>
+            <div className="game-reviews">
+              <Reviews reviews={selectedGame.reviews} />
+            </div>
           </div>
-        </div>
-      )}
-      {selectedGame && (
-        <div className="game-details">
-          <p>
-            <strong>Genre:</strong> {selectedGame.genre}
-          </p>
-          <p>
-            <strong>Description:</strong> {selectedGame.description}
-          </p>
-          <p>
-            <strong>Mood:</strong> {selectedGame.mood}
-          </p>
         </div>
       )}
     </div>
