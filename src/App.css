@@ -1,6 +1,25 @@
 body {
   background-color: grey;
 }
+.search {
+  width: 50%;
+  text-align: center;
+  position: relative;
+  display: block;
+  margin: auto;
+  padding: 2rem;
+}
+
+.searchTerm {
+  text-align: center;
+  width: 100%;
+  border: 3px solid #6A00F5;
+  padding: 5px;
+  height: 2rem;
+  border-radius: 3px;
+  outline: none;
+  font-size: 1.5rem;
+}
 
 .game-grid {
   display: flex;
