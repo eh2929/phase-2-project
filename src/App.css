@@ -1,62 +1,10 @@
+/* body styling  */
+
 body {
   background-color: grey;
 }
 
-.game-grid {
-  display: flex;
-  justify-content: center;
-  overflow-x: auto;
-  padding: 20px;
-  height: 300px; 
-}
-
-.game-grid div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 200px;
-  margin: 10px;
-  opacity: 0.5;
-}
-
-.game-grid div.selected {
-  transform: scale(1.2);
-  opacity: 1;
-}
-
-.selected-game {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 300px; 
-  margin: 20px auto;
-}
-
-.game-details {
-  text-align: center;
-}
-
-.game-title {
-  text-align: center;
-}
-
-.selected-game {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-}
-
-.selected-game img {
-  margin: 0 50px;
-}
-
-.game-grid img,
-.selected-game img {
-  width: 100%;
-  object-fit: contain;
-}
-
+/* header styling */
 .header {
   background-color: #f8f9fa;
   padding: 20px;
@@ -80,4 +28,106 @@ body {
 
 .header li {
   margin: 0 10px;
+}
+
+/* game-grid displaying all of the games */
+
+.game-grid {
+  display: flex;
+  justify-content: center;
+  overflow-x: auto;
+  padding: 20px;
+  height: 300px;
+  border: 1px solid black;
+}
+
+/* game grid alignment and sizing */
+
+.game-grid div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  margin: 10px;
+  opacity: 0.5;
+}
+
+/* game grid image sizing */
+
+.game-grid img,
+.selected-game img {
+  width: 100%;
+  object-fit: contain;
+}
+
+/* selected game in the game-grid */
+
+.game-grid div.selected {
+  transform: scale(1.2);
+  opacity: 1;
+}
+
+/* selected game in the middle of the page */
+
+.selected-game {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 600px;
+  margin: 20px auto;
+  justify-content: center;
+}
+
+/* game details for the selected game */
+
+.game-details {
+  flex: 1;
+}
+
+/* game title */
+
+.game-title {
+  text-align: center;
+}
+
+/* selected image and button styling */
+
+.selected-game img {
+  width: 500px;
+  height: 500px;
+  object-fit: contain;
+  margin: 5px;
+}
+
+/* game reviews */
+
+.game-and-reviews {
+  display: flex;
+  justify-content: center;
+}
+
+.selected-game {
+  flex: 1;
+  width: auto;
+  border: 1px solid black;
+}
+
+.game-info-and-reviews {
+  display: flex;
+  flex-direction: row;
+}
+
+.game-details {
+  flex: 2;
+  border: 1px solid black;
+}
+
+.game-reviews {
+  flex: 1;
+  background-color: white;
+  padding: 20px;
+  margin-top: 50px;
+  height: 50vh;
+  border: 1px solid black;
+  overflow-y: auto;
 }
