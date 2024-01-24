@@ -4,6 +4,14 @@ import Reviews from "./Reviews";
 function GameList({ games }) {
   const [selectedGame, setSelectedGame] = useState(games[0]);
   const selectedGameRef = useRef(null);
+  const [gameReviews, setGameReviews] = useState([]);
+
+  const addReview = (gameId, review) => {
+    setGameReviews((prevReviews) => ({
+      ...prevReviews,
+      [gameId]: [...(prevReviews[gameId] || []), review],
+    }));
+  };
 
   useEffect(() => {
     if (selectedGame) {
@@ -66,7 +74,13 @@ function GameList({ games }) {
               </p>
             </div>
             <div className="game-reviews">
-              <Reviews reviews={selectedGame.reviews} />
+              <Reviews
+                reviews={selectedGame.reviews.concat(
+                  gameReviews[selectedGame.id] || []
+                )}
+                selectedGame={selectedGame}
+                addReview={addReview}
+              />
             </div>
           </div>
         </div>
