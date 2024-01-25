@@ -1,5 +1,48 @@
-/* collection page styling */
+/* Collection.css */
+
+.collection-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  color: #fff;
+  background-color: #343a40; /* Matched background color to App.css */
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
 
 .title {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #f8f9fa; /* Matched text color to App.css */
+}
+
+.no-games {
+  font-size: 1.2em;
   text-align: center;
-} 
+  margin-top: 30px;
+  color: #6c757d; /* Matched text color to header h2 in App.css */
+}
+
+.liked-game-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 20px;
+}
+
+.game-item {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.game-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.game-title {
+  margin-top: 10px;
+  font-size: 1.2em;
+  text-align: center;
+  color: #f8f9fa; /* Matched text color to App.css */
+}

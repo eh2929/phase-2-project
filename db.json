@@ -91,5 +91,13 @@
       "liked": false
     }
   ],
-  "reviews": []
+  "reviews": [
+    {
+      "id": "b943",
+      "title": "",
+      "content": "i love this game!",
+      "reviewer": "christie ",
+      "gameId": "4"
+    }
+  ]
 }

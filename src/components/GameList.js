@@ -55,7 +55,7 @@ function GameList({ games, setGames }) {
           <div
             key={game.id}
             ref={game === selectedGame ? selectedGameRef : null}
-            className={game === selectedGame ? "selected" : ""}
+            className={`game-item ${game === selectedGame ? "selected" : ""}`}
             onClick={() => selectGame(game)}
           >
             <img src={game.image_url} alt={game.title} />
@@ -74,18 +74,22 @@ function GameList({ games, setGames }) {
               <div className="game-title">
                 <h2>{selectedGame.title}</h2>
               </div>
-              <p>
-                <strong>Genre:</strong> {selectedGame.genre}
-              </p>
-              <p>
-                <strong>Description:</strong> {selectedGame.description}
-              </p>
-              <p>
-                <strong>Mood:</strong> {selectedGame.mood}
-                <button onClick={handleLikeClick}>
+              <div className="game-info">
+                <p>
+                  <strong>Genre:</strong> {selectedGame.genre}
+                </p>
+                <p>
+                  <strong>Description:</strong> {selectedGame.description}
+                </p>
+                <p>
+                  <strong>Mood:</strong> {selectedGame.mood}
+                </p>
+              </div>
+              <div className="button-container">
+                <button className="likeButton" onClick={handleLikeClick}>
                   {selectedGame.liked ? "Unlike" : "Like"}
                 </button>
-              </p>
+              </div>
             </div>
             <div className="game-reviews">
               <Reviews

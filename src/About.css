@@ -1,16 +1,19 @@
+/* About.css */
+
 .about-page {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
   color: #fff;
-  background-color: #1c1c1c;
-  border-radius: 10px;
+  background-color: #343a40; /* Matched background color to App.css */
+  border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .title {
   font-size: 2em;
   margin-bottom: 20px;
+  color: #f8f9fa; /* Matched text color to App.css */
 }
 
 .intro {
