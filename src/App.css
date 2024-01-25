@@ -1,7 +1,7 @@
 /* App.css */
 
 body {
-  background-color: #1c1c1c;
+  background-color: #1b1629;
   color: #fff;
   margin: 0;
   font-family: "Arial", sans-serif;
@@ -9,7 +9,7 @@ body {
 
 /* header styling */
 .header {
-  background-color: #1c1c1c;
+  background-color: #201a2e;
   padding: 20px;
   text-align: center;
   color: #fff;
@@ -33,6 +33,11 @@ body {
 .header li {
   margin: 0 10px;
 }
+
+.menuLinks a {
+  color: #fff
+}
+
 
 /* game-grid displaying all of the games */
 
@@ -58,6 +63,10 @@ body {
   padding: 10px;
   border-radius: 8px;
   transform: transform 0.3s ease-in-out;
+}
+
+.game-grid div:hover {
+  transform: scale(1.25);
 }
 /* game grid image sizing */
 
@@ -147,7 +156,7 @@ body {
 
 .game-reviews {
   flex: 1;
-  background-color: #1c1c1c;
+  background-color: #343a40;
   padding: 40px;
   margin-top: 50px;
   margin-left: 20px;
@@ -192,6 +201,3 @@ body {
 }
 
 
-.game-grid div:hover {
-  transform: scale(1.05);
-}

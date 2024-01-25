@@ -1,4 +1,5 @@
 import React from "react";
+import "../App.css";
 import { Link } from "react-router-dom";
 
 function Header() {
@@ -7,13 +8,13 @@ function Header() {
       <h1> Let's Find Games</h1>
       <h2>
         <ul>
-          <li>
+          <li className="menuLinks">
             <Link to="/">Home</Link>
           </li>
-          <li>
+          <li className="menuLinks">
             <Link to="/collection">My Collection</Link>
           </li>
-          <li>
+          <li className="menuLinks">
             <Link to="/about">About</Link>
           </li>
         </ul>

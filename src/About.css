@@ -1,13 +1,14 @@
 /* About.css */
 
+
 .about-page {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
   color: #fff;
-  background-color: #343a40; /* Matched background color to App.css */
+  background-color: #414952; /* Matched background color to App.css */
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 10px rgba(156, 147, 147, 0.5);
 }
 
 .title {
