@@ -21,7 +21,7 @@ function GameList({ games, setGames }) {
   };
 
   useEffect(() => {
-    if (selectedGame) {
+    if (selectedGame && selectedGameRef.current) {
       selectedGameRef.current.scrollIntoView({
         behavior: "smooth",
         block: "nearest",
@@ -34,19 +34,17 @@ function GameList({ games, setGames }) {
     setSelectedGameLocal(game);
   };
 
-  const selectPreviousGame = () => {
-    const currentIndex = games.indexOf(selectedGame);
-    if (currentIndex > 0) {
-      setSelectedGameLocal(games[currentIndex - 1]);
-    }
-  };
+const selectPreviousGame = () => {
+  const currentIndex = games.indexOf(selectedGame);
+  const newIndex = (currentIndex - 1 + games.length) % games.length;
+  setSelectedGameLocal(games[newIndex]);
+};
 
-  const selectNextGame = () => {
-    const currentIndex = games.indexOf(selectedGame);
-    if (currentIndex < games.length - 1) {
-      setSelectedGameLocal(games[currentIndex + 1]);
-    }
-  };
+ const selectNextGame = () => {
+   const currentIndex = games.indexOf(selectedGame);
+   const newIndex = (currentIndex + 1) % games.length;
+   setSelectedGameLocal(games[newIndex]);
+ };
 
   return (
     <div>
@@ -55,7 +53,7 @@ function GameList({ games, setGames }) {
           <div
             key={game.id}
             ref={game === selectedGame ? selectedGameRef : null}
-            className={game === selectedGame ? "selected" : ""}
+            className={`game-item ${game === selectedGame ? "selected" : ""}`}
             onClick={() => selectGame(game)}
           >
             <img src={game.image_url} alt={game.title} />
@@ -74,20 +72,25 @@ function GameList({ games, setGames }) {
               <div className="game-title">
                 <h2>{selectedGame.title}</h2>
               </div>
-              <p>
-                <strong>Genre:</strong> {selectedGame.genre}
-              </p>
-              <p>
-                <strong>Description:</strong> {selectedGame.description}
-              </p>
-              <p>
-                <strong>Mood:</strong> {selectedGame.mood}
-                <button onClick={handleLikeClick}>
+              <div className="game-info">
+                <p>
+                  <strong>Genre:</strong> {selectedGame.genre}
+                </p>
+                <p>
+                  <strong>Description:</strong> {selectedGame.description}
+                </p>
+                <p>
+                  <strong>Mood:</strong> {selectedGame.mood}
+                </p>
+              </div>
+              <div className="button-container">
+                <button className="likeButton" onClick={handleLikeClick}>
                   {selectedGame.liked ? "Unlike" : "Like"}
                 </button>
-              </p>
+              </div>
             </div>
             <div className="game-reviews">
+              
               <Reviews
                 reviews={selectedGame.reviews.concat(
                   gameReviews[selectedGame.id] || []
@@ -95,6 +98,7 @@ function GameList({ games, setGames }) {
                 selectedGame={selectedGame}
                 addReview={addReview}
               />
+              
             </div>
           </div>
         </div>

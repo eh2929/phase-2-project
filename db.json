@@ -91,5 +91,34 @@
       "liked": false
     }
   ],
-  "reviews": []
+  "reviews": [
+    {
+      "id": "b943",
+      "title": "",
+      "content": "i love this game!",
+      "reviewer": "christie ",
+      "gameId": "4"
+    },
+    {
+      "id": "35b8",
+      "title": "",
+      "content": "great game",
+      "reviewer": "ethan",
+      "gameId": "1"
+    },
+    {
+      "id": "e21b",
+      "title": "",
+      "content": "this game is awesome",
+      "reviewer": "ethan",
+      "gameId": "1"
+    },
+    {
+      "id": "c8c1",
+      "title": "",
+      "content": "everyone loves playing this game",
+      "reviewer": "me ",
+      "gameId": "3"
+    }
+  ]
 }

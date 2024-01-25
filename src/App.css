@@ -1,18 +1,22 @@
-/* body styling  */
+/* App.css */
 
 body {
-  background-color: grey;
+  background-color: #1b1629;
+  color: #fff;
+  margin: 0;
+  font-family: "Arial", sans-serif;
 }
 
 /* header styling */
 .header {
-  background-color: #f8f9fa;
+  background-color: #201a2e;
   padding: 20px;
   text-align: center;
+  color: #fff;
 }
 
 .header h1 {
-  color: #343a40;
+  color: #f8f9fa;
 }
 
 .header h2 {
@@ -30,15 +34,19 @@ body {
   margin: 0 10px;
 }
 
+.menuLinks a {
+  color: #fff
+}
+
+
 /* game-grid displaying all of the games */
 
 .game-grid {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start; /* Change to flex-start to minimize empty space */
   overflow-x: auto;
   padding: 20px;
-  height: 300px;
-  border: 1px solid black;
+  border: 1px solid #343a40;
 }
 
 /* game grid alignment and sizing */
@@ -47,17 +55,26 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex-grow: 1; /* Allow items to grow and occupy more space */
   width: 200px;
   margin: 10px;
   opacity: 0.5;
+  background-color: #343a40;
+  padding: 10px;
+  border-radius: 8px;
+  transform: transform 0.3s ease-in-out;
 }
 
+.game-grid div:hover {
+  transform: scale(1.25);
+}
 /* game grid image sizing */
 
 .game-grid img,
 .selected-game img {
+  height: 100%;
   width: 100%;
-  object-fit: contain;
+  object-fit: cover;
 }
 
 /* selected game in the game-grid */
@@ -73,9 +90,14 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
-  width: 600px;
-  margin: 20px auto;
-  justify-content: center;
+  width: 100%; /* Use 100% width to occupy the entire width of the parent container */
+  margin: 40px 40px; /* Reduce top and bottom margin */
+  justify-content: space-around; /* Adjust spacing around the elements */
+  background-color: #343a40;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #f8f9fa;
+  margin-bottom: 20px;
 }
 
 /* game details for the selected game */
@@ -88,15 +110,16 @@ body {
 
 .game-title {
   text-align: center;
+  color: #f8f9fa;
 }
 
 /* selected image and button styling */
 
 .selected-game img {
-  width: 500px;
+  width: 500px; /* Use auto width to maintain the aspect ratio of the image */
   height: 500px;
   object-fit: contain;
-  margin: 5px;
+  margin: 1px;
 }
 
 /* game reviews */
@@ -109,25 +132,75 @@ body {
 .selected-game {
   flex: 1;
   width: auto;
-  border: 1px solid black;
+  border: 1px solid #f8f9fa;
+  background-color: #343a40;
+  padding: 20px;
+  border-radius: 8px;
 }
 
+/* game info and reviews layout */
 .game-info-and-reviews {
   display: flex;
   flex-direction: row;
+  margin-top: 20px; /* Add margin between game details and reviews */
 }
 
 .game-details {
   flex: 2;
-  border: 1px solid black;
+  border: 1px solid #f8f9fa;
+  background-color: #343a40;
+  margin-right: 20px;
+  padding: 40px;
+  border-radius: 8px;
+  margin-bottom: 20px;
 }
 
 .game-reviews {
   flex: 1;
-  background-color: white;
-  padding: 20px;
-  margin-top: 50px;
-  height: 50vh;
-  border: 1px solid black;
+  background-color: #343a40;
+  padding: 40px;
+  border: 1px solid #f8f9fa;
   overflow-y: auto;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  bottom: 0; /* Position the container at the bottom */
+  right: 0; /* Position the container at the right */
+  z-index: 1; /* Add a z-index to ensure it appears above other elements */
 }
+
+
+.selected-game button {
+  background-color: #6c757d;
+  color: #fff;
+  border: none;
+  padding: 50px;
+  margin: 0 20px; /* Adjust the spacing between buttons */
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.likeButton {
+  background-color: #6c757d;
+  color: #fff;
+  border: none;
+  padding: 20px;
+  margin: 0 20px; /* Adjust the spacing between buttons */
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.button-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: left;
+}
+
+.game-info {
+  background-color: #1c1c1c;
+  padding: 20px;
+  border: 1px solid #343a40;
+  border-radius: 8px;
+}
+
+
+
