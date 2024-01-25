@@ -13,16 +13,16 @@ function About() {
       </p>
       <h2 className="outro">Key Features</h2>
       <ul>
-        <li className="list">• Browse a diverse selection of video games.</li>
+        <li className="list">Browse a diverse selection of video games.</li>
         <li className="list">
-          • View detailed information about each game, including genre,
+          View detailed information about each game, including genre,
           description, and mood.
         </li>
         <li className="list">
-          • Read and leave reviews for your favorite games.
+          Read and leave reviews for your favorite games.
         </li>
         <li className="list">
-          • Like your preferred games to add them to your personal collection.
+          Like your preferred games to add them to your personal collection.
         </li>
       </ul>
       <h2 className="outro">How to Use</h2>

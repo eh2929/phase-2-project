@@ -29,6 +29,18 @@
   gap: 20px;
 }
 
+
+
+.likeButton {
+   background-color: #6c757d;
+   color: #fff;
+   border: none;
+   padding: 20px;
+   margin: 20px 0;
+   cursor: pointer;
+   border-radius: 5px;
+}
+
 .game-item {
   border-radius: 8px;
   overflow: hidden;

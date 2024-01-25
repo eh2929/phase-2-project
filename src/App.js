@@ -52,7 +52,7 @@ function App() {
         />
 
         <Route path="/about" element={<About />} />
-        <Route path="/collection" element={<Collection games={games}/>} />
+        <Route path="/collection" element={<Collection games={games} setGames={setGames}/>} />
       </Routes>
     </div>
   );

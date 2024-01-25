@@ -98,6 +98,20 @@
       "content": "i love this game!",
       "reviewer": "christie ",
       "gameId": "4"
+    },
+    {
+      "id": "35b8",
+      "title": "",
+      "content": "great game",
+      "reviewer": "ethan",
+      "gameId": "1"
+    },
+    {
+      "id": "e21b",
+      "title": "",
+      "content": "this game is awesome",
+      "reviewer": "ethan",
+      "gameId": "1"
     }
   ]
 }

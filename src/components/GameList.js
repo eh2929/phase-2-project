@@ -21,7 +21,7 @@ function GameList({ games, setGames }) {
   };
 
   useEffect(() => {
-    if (selectedGame) {
+    if (selectedGame && selectedGameRef.current) {
       selectedGameRef.current.scrollIntoView({
         behavior: "smooth",
         block: "nearest",
@@ -34,19 +34,17 @@ function GameList({ games, setGames }) {
     setSelectedGameLocal(game);
   };
 
-  const selectPreviousGame = () => {
-    const currentIndex = games.indexOf(selectedGame);
-    if (currentIndex > 0) {
-      setSelectedGameLocal(games[currentIndex - 1]);
-    }
-  };
+const selectPreviousGame = () => {
+  const currentIndex = games.indexOf(selectedGame);
+  const newIndex = (currentIndex - 1 + games.length) % games.length;
+  setSelectedGameLocal(games[newIndex]);
+};
 
-  const selectNextGame = () => {
-    const currentIndex = games.indexOf(selectedGame);
-    if (currentIndex < games.length - 1) {
-      setSelectedGameLocal(games[currentIndex + 1]);
-    }
-  };
+ const selectNextGame = () => {
+   const currentIndex = games.indexOf(selectedGame);
+   const newIndex = (currentIndex + 1) % games.length;
+   setSelectedGameLocal(games[newIndex]);
+ };
 
   return (
     <div>
@@ -92,6 +90,7 @@ function GameList({ games, setGames }) {
               </div>
             </div>
             <div className="game-reviews">
+              
               <Reviews
                 reviews={selectedGame.reviews.concat(
                   gameReviews[selectedGame.id] || []
@@ -99,6 +98,7 @@ function GameList({ games, setGames }) {
                 selectedGame={selectedGame}
                 addReview={addReview}
               />
+              
             </div>
           </div>
         </div>
