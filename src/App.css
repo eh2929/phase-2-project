@@ -80,9 +80,9 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
-  width: 600px;
-  margin: 20px auto;
-  justify-content: center;
+  width: 100%; /* Use 100% width to occupy the entire width of the parent container */
+  margin: 40px 40px; /* Reduce top and bottom margin */
+  justify-content: space-around; /* Adjust spacing around the elements */
   background-color: #343a40;
   padding: 20px;
   border-radius: 8px;
@@ -105,10 +105,10 @@ body {
 /* selected image and button styling */
 
 .selected-game img {
-  width: 500px;
+  width: 500px; /* Use auto width to maintain the aspect ratio of the image */
   height: 500px;
   object-fit: contain;
-  margin: 5px;
+  margin: 1px;
 }
 
 /* game reviews */
@@ -127,26 +127,41 @@ body {
   border-radius: 8px;
 }
 
+/* game info and reviews layout */
 .game-info-and-reviews {
   display: flex;
   flex-direction: row;
+  margin-top: 20px; /* Add margin between game details and reviews */
 }
 
 .game-details {
   flex: 2;
   border: 1px solid #f8f9fa;
   background-color: #343a40;
-  padding: 20px;
+  margin-right: 20px;
+  padding: 40px;
   border-radius: 8px;
 }
 
 .game-reviews {
   flex: 1;
   background-color: #1c1c1c;
-  padding: 20px;
+  padding: 40px;
   margin-top: 50px;
+  margin-left: 20px;
+  margin-right: 20px;
   height: 50vh;
   border: 1px solid #f8f9fa;
   overflow-y: auto;
   border-radius: 8px;
+}
+
+.selected-game button {
+  background-color: #6c757d;
+  color: #fff;
+  border: none;
+  padding: 50px;
+  margin: 0 20px; /* Adjust the spacing between buttons */
+  cursor: pointer;
+  border-radius: 5px;
 }
