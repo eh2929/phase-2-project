@@ -1,18 +1,22 @@
-/* body styling  */
+/* App.css */
 
 body {
-  background-color: grey;
+  background-color: #1c1c1c;
+  color: #fff;
+  margin: 0;
+  font-family: "Arial", sans-serif;
 }
 
 /* header styling */
 .header {
-  background-color: #f8f9fa;
+  background-color: #1c1c1c;
   padding: 20px;
   text-align: center;
+  color: #fff;
 }
 
 .header h1 {
-  color: #343a40;
+  color: #f8f9fa;
 }
 
 .header h2 {
@@ -34,11 +38,10 @@ body {
 
 .game-grid {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start; /* Change to flex-start to minimize empty space */
   overflow-x: auto;
   padding: 20px;
-  height: 300px;
-  border: 1px solid black;
+  border: 1px solid #343a40;
 }
 
 /* game grid alignment and sizing */
@@ -47,17 +50,21 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex-grow: 1; /* Allow items to grow and occupy more space */
   width: 200px;
   margin: 10px;
   opacity: 0.5;
+  background-color: #343a40;
+  padding: 10px;
+  border-radius: 8px;
 }
-
 /* game grid image sizing */
 
 .game-grid img,
 .selected-game img {
+  height: 100%;
   width: 100%;
-  object-fit: contain;
+  object-fit: cover;
 }
 
 /* selected game in the game-grid */
@@ -76,6 +83,10 @@ body {
   width: 600px;
   margin: 20px auto;
   justify-content: center;
+  background-color: #343a40;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #f8f9fa;
 }
 
 /* game details for the selected game */
@@ -88,6 +99,7 @@ body {
 
 .game-title {
   text-align: center;
+  color: #f8f9fa;
 }
 
 /* selected image and button styling */
@@ -109,7 +121,10 @@ body {
 .selected-game {
   flex: 1;
   width: auto;
-  border: 1px solid black;
+  border: 1px solid #f8f9fa;
+  background-color: #343a40;
+  padding: 20px;
+  border-radius: 8px;
 }
 
 .game-info-and-reviews {
@@ -119,15 +134,19 @@ body {
 
 .game-details {
   flex: 2;
-  border: 1px solid black;
+  border: 1px solid #f8f9fa;
+  background-color: #343a40;
+  padding: 20px;
+  border-radius: 8px;
 }
 
 .game-reviews {
   flex: 1;
-  background-color: white;
+  background-color: #1c1c1c;
   padding: 20px;
   margin-top: 50px;
   height: 50vh;
-  border: 1px solid black;
+  border: 1px solid #f8f9fa;
   overflow-y: auto;
+  border-radius: 8px;
 }
