@@ -1,11 +1,12 @@
 import React from "react";
+import "./Collection.css";
 
 function Collection({ games }) {
   const likedGames = games.filter((game) => game.liked);
 
   return (
     <div>
-      <h2>My Liked Games</h2>
+      <h2 className="title">My Liked Games</h2>
       <div className="liked-game-list">
         {likedGames.map((game) => (
           <div key={game.id}>

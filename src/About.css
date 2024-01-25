@@ -1,0 +1,30 @@
+.about-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  color: #fff;
+  background-color: #1c1c1c;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.title {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.intro {
+  font-size: 1.1em;
+  margin-bottom: 15px;
+}
+
+.outro {
+  font-size: 1.5em;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+.list {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+}
