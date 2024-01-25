@@ -48,11 +48,11 @@ function App() {
       <Routes>
         <Route
           path="/"
-          element={<GameList games={games} setSelectedGame={setSelectedGame} />}
+          element={<GameList games={games} setSelectedGame={setSelectedGame} setGames={setGames} />}
         />
 
         <Route path="/about" element={<About />} />
-        <Route path="/collection" element={<Collection />} />
+        <Route path="/collection" element={<Collection games={games}/>} />
       </Routes>
     </div>
   );
