@@ -1,9 +1,24 @@
 import React, { useState, useRef, useEffect } from "react";
 import Reviews from "./Reviews";
 
-function GameList({ games }) {
-  const [selectedGame, setSelectedGame] = useState(games[0]);
+function GameList({ games, setGames }) {
+  const [selectedGame, setSelectedGameLocal] = useState(games[0]);
   const selectedGameRef = useRef(null);
+  const [gameReviews, setGameReviews] = useState([]);
+
+  const handleLikeClick = () => {
+    const updatedGames = games.map((game) =>
+      game === selectedGame ? { ...game, liked: !game.liked } : game
+    );
+    setGames(updatedGames);
+  };
+
+  const addReview = (gameId, review) => {
+    setGameReviews((prevReviews) => ({
+      ...prevReviews,
+      [gameId]: [...(prevReviews[gameId] || []), review],
+    }));
+  };
 
   useEffect(() => {
     if (selectedGame) {
@@ -15,17 +30,21 @@ function GameList({ games }) {
     }
   }, [selectedGame]);
 
+  const selectGame = (game) => {
+    setSelectedGameLocal(game);
+  };
+
   const selectPreviousGame = () => {
     const currentIndex = games.indexOf(selectedGame);
     if (currentIndex > 0) {
-      setSelectedGame(games[currentIndex - 1]);
+      setSelectedGameLocal(games[currentIndex - 1]);
     }
   };
 
   const selectNextGame = () => {
     const currentIndex = games.indexOf(selectedGame);
     if (currentIndex < games.length - 1) {
-      setSelectedGame(games[currentIndex + 1]);
+      setSelectedGameLocal(games[currentIndex + 1]);
     }
   };
 
@@ -37,7 +56,7 @@ function GameList({ games }) {
             key={game.id}
             ref={game === selectedGame ? selectedGameRef : null}
             className={game === selectedGame ? "selected" : ""}
-            onClick={() => setSelectedGame(game)}
+            onClick={() => selectGame(game)}
           >
             <img src={game.image_url} alt={game.title} />
           </div>
@@ -63,10 +82,19 @@ function GameList({ games }) {
               </p>
               <p>
                 <strong>Mood:</strong> {selectedGame.mood}
+                <button onClick={handleLikeClick}>
+                  {selectedGame.liked ? "Unlike" : "Like"}
+                </button>
               </p>
             </div>
             <div className="game-reviews">
-              <Reviews reviews={selectedGame.reviews} />
+              <Reviews
+                reviews={selectedGame.reviews.concat(
+                  gameReviews[selectedGame.id] || []
+                )}
+                selectedGame={selectedGame}
+                addReview={addReview}
+              />
             </div>
           </div>
         </div>

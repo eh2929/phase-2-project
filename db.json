@@ -1,154 +1,95 @@
 {
   "games": [
     {
-      "id": 1,
+      "id": "1",
       "title": "Stardew Valley",
       "genre": "Simulation",
       "description": "Build a farm, make friends, and enjoy a relaxing rural life.",
       "mood": "Relaxing",
       "image_url": "https://thumbnails.pcgamingwiki.com/1/1b/Stardew_Valley_cover.png/300px-Stardew_Valley_cover.png",
-      "reviews": [
-        {
-          "id": 1,
-          "reviewer": "some random person",
-          "content": "A delightful and charming simulation game that offers a serene escape. Building a farm, making friends, and embracing the rural life create a truly heartwarming experience."
-        }
-      ]
+      "liked": false
     },
     {
-      "id": 2,
+      "id": "2",
       "title": "Minecraft",
       "genre": "Sandbox",
       "description": "Build, explore, and create in a blocky, open-world environment.",
       "mood": "Creative",
       "image_url": "https://upload.wikimedia.org/wikipedia/en/thumb/5/51/Minecraft_cover.png/220px-Minecraft_cover.png",
-      "reviews": [
-        {
-          "id": 1,
-          "reviewer": "some random person",
-          "content": "Unleash your creativity in this iconic sandbox world. With endless possibilities to build, explore, and create, Minecraft provides an immersive and boundless adventure."
-        }
-      ]
+      "liked": false
     },
     {
-      "id": 3,
+      "id": "3",
       "title": "Among Us",
       "genre": "Social Deduction",
       "description": "Work together to complete tasks, but watch out for impostors!",
       "mood": "Social",
       "image_url": "https://assets.nintendo.com/image/upload/ar_16:9,c_lpad,w_1240/b_white/f_auto/q_auto/ncom/software/switch/70010000036098/758ab0b61205081da2466386940752c70e0e5ea43bd39e8b9b13eaa455c69b7e",
-      "reviews": [
-        {
-          "id": 1,
-          "reviewer": "some random person",
-          "content": "A thrilling social deduction game that keeps you on the edge of your seat. Work with teammates to complete tasks, but beware of impostors in this engaging and suspenseful multiplayer experience."
-        }
-      ]
+      "liked": false
     },
     {
-      "id": 4,
+      "id": "4",
       "title": "Animal Crossing: New Horizons",
       "genre": "Life Simulation",
       "description": "Create your own island paradise and enjoy a relaxing, social life.",
       "mood": "Relaxing",
       "image_url": "https://t2.gstatic.com/images?q=tbn:ANd9GcTZKpAnJJlsFA9Y3rYF3OYY4EmAtB32HkknkvCSx3a43Onnx-xebo_fTKJBf5VbC6gTjzdrFQ",
-      "reviews": [
-        {
-          "id": 1,
-          "reviewer": "some random person",
-          "content": "Crafting your own island paradise has never been more relaxing. Enjoy the laid-back life and social interactions in this beautiful life simulation game."
-        }
-      ]
+      "liked": false
     },
     {
-      "id": 5,
+      "id": "5",
       "title": "Terraria",
       "genre": "Action-Adventure",
       "description": "Explore, build, and battle in a 2D sandbox world.",
       "mood": "Creative",
       "image_url": "https://m.media-amazon.com/images/I/815a-OjJ0SL._AC_UF894,1000_QL80_.jpg",
-      "reviews": [
-        {
-          "id": 1,
-          "reviewer": "some random person",
-          "content": "A sandbox adventure with endless exploration and creativity, Terraria captivates players with its pixelated charm. Whether delving into caves, building elaborate structures, or facing challenging bosses, it provides a rich and rewarding journey."
-        }
-      ]
+      "liked": false
     },
     {
-      "id": 6,
+      "id": "6",
       "title": "Fortnite",
       "genre": "Battle Royale",
       "description": "Compete in a fast-paced battle royale with a social multiplayer aspect.",
       "mood": "Social",
       "image_url": "https://cdn2.unrealengine.com/blade-2560x1440-2560x1440-d4e556fb8166.jpg",
-      "reviews": [
-        {
-          "id": 1,
-          "reviewer": "some random person",
-          "content": "Fortnite remains a cultural phenomenon with its ever-evolving battle royale gameplay. Combining intense action, creative building mechanics, and regular updates, it has solidified its place as a dynamic and engaging multiplayer experience."
-        }
-      ]
+      "liked": false
     },
     {
-      "id": 7,
+      "id": "7",
       "title": "Journey",
       "genre": "Adventure",
       "description": "Embark on a beautiful, artistic journey with online cooperative play.",
       "mood": "Relaxing",
       "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAQKxxR6CvjwDnwqHJPCjSdAeRfIW7AczTOQ&usqp=CAU",
-      "reviews": [
-        {
-          "id": 1,
-          "reviewer": "some random person",
-          "content": "Journey stands as a masterpiece in the world of video games, offering a breathtaking and emotionally evocative experience. Its minimalist approach to storytelling and stunning visuals create a unique and unforgettable adventure."
-        }
-      ]
+      "liked": false
     },
     {
-      "id": 8,
+      "id": "8",
       "title": "The Sims 4",
       "genre": "Life Simulation",
       "description": "Create and control people in a virtual world, focusing on daily life.",
       "mood": "Creative",
       "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSy7JNqy29Emu43C6H3k_G0oC7tFaRwmZylEw&usqp=CAU",
-      "reviews": [
-        {
-          "id": 1,
-          "reviewer": "some random person",
-          "content": "A delightful and charming simulation game that offers a serene escape. Building a farm, making friends, and embracing the rural life create a truly heartwarming experience."
-        }
-      ]
+      "liked": false
     },
     {
-      "id": 9,
+      "id": "9",
       "title": "Fall Guys: Ultimate Knockout",
       "genre": "Battle Royale",
       "description": "Compete in whimsical challenges in a lighthearted social environment.",
       "mood": "Social",
       "image_url": "https://cdn1.epicgames.com/offer/50118b7f954e450f8823df1614b24e80/EGS_FallGuys_Mediatonic_S2_1200x1600-6ea0c038d654d7b6dc06bf86a1522f21",
-      "reviews": [
-        {
-          "id": 1,
-          "reviewer": "some random person",
-          "content": "Fall Guys delivers a hilarious and chaotic battle royale experience like no other. Its whimsical challenges and adorable jellybean characters make for a lighthearted and addictive multiplayer adventure."
-        }
-      ]
+      "liked": false
     },
     {
-      "id": 10,
+      "id": "10",
       "title": "Gris",
       "genre": "Platformer",
       "description": "Experience a serene journey through a world of sorrow and hope.",
       "mood": "Relaxing",
       "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR00sgwK53G0iVjz83g4bzY59KJGWdWhGBIMA&usqp=CAU",
-      "reviews": [
-        {
-          "id": 1,
-          "reviewer": "some random person",
-          "content": "A visually stunning and emotionally resonant platformer, Gris takes players on a mesmerizing journey through a world filled with sorrow and hope, blending captivating art with intuitive gameplay."
-        }
-      ]
+      "liked": false
     }
-  ]
+  ],
+  "reviews": []
 }

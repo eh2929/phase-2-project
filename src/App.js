@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
 import Header from "./components/Header";
 import GameList from "./components/GameList";
+import About from "./About";
+import Collection from "./Collection";
+import { Routes, Route } from "react-router-dom";
 
 import "./App.css";
 
@@ -12,7 +15,7 @@ function App() {
 
   useEffect(() => {
     setIsLoading(true);
-    fetch("http://localhost:3000/games")
+    fetch("http://localhost:3000/games?_embed=reviews")
       .then((response) => {
         if (response.ok) {
           return response.json();
@@ -42,7 +45,15 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <GameList games={games} setSelectedGame={setSelectedGame} />
+      <Routes>
+        <Route
+          path="/"
+          element={<GameList games={games} setSelectedGame={setSelectedGame} setGames={setGames} />}
+        />
+
+        <Route path="/about" element={<About />} />
+        <Route path="/collection" element={<Collection games={games}/>} />
+      </Routes>
     </div>
   );
 }
