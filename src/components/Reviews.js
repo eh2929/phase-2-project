@@ -11,14 +11,13 @@ function Reviews({ reviews, selectedGame, addReview }) {
     const gameId = selectedGame.id;
     const newReview = { title, content, reviewer, gameId };
     addReview(selectedGame.id, newReview);
-    
 
     fetch(`http://localhost:3000/reviews`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify( newReview ),
+      body: JSON.stringify(newReview),
     })
       .then((response) => response.json())
       .then((data) => {
